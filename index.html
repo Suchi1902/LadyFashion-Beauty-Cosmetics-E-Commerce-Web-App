@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LadyFashion - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="products.js"></script>
+  <script defer src="cart.js"></script>
+  <script defer src="wishlist.js"></script>
+  <script defer src="acount.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">LadyFashion</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="acount.html">Account</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Beauty & Cosmetics</h1>
+        <p>Discover 100+ premium skincare, haircare, and makeup products</p>
+        <a href="#product-list" class="btn">Shop Now</a>
+      </div>
+    </section>
+  </header>
+  <!-- Filter Section -->
+<section class="filter-bar">
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="makeup">Makeup</option>
+    <option value="skincare">Skincare</option>
+    <option value="haircare">Haircare</option>
+    <option value="nails">Nails</option>
+  </select>
+
+  <select id="priceFilter">
+    <option value="all">All Prices</option>
+    <option value="0-500">Under ₹500</option>
+    <option value="500-1000">₹500 - ₹1000</option>
+    <option value="1000-2000">₹1000 - ₹2000</option>
+    <option value="2000">Above ₹2000</option>
+  </select>
+
+  <button onclick="applyFilters()">Apply Filters</button>
+</section>
+
+
+  <!-- Products Section -->
+  <section class="product-grid" id="product-list">
+    <!-- Products will load dynamically -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LadyFashion. All rights reserved.</p>
+  </footer>
+</body>
+</html>

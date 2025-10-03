@@ -1,0 +1,387 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e91e63;
+  padding: 15px 30px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://img.etimg.com/thumb/width-1600,height-900,imgsize-28960,resizemode-75,msid-62838360/industry/cons-products/fmcg/cosmetics-market-to-grow-by-25-to-20-billion-by-2025.jpg") no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  padding: 12px 25px;
+  background: #e91e63;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #c2185b;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product-actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn-cart, .btn-wishlist {
+  background: #e91e63;
+  color: white;
+}
+
+.btn-cart:hover, .btn-wishlist:hover {
+  background: #c2185b;
+}
+
+/* Cart & Wishlist */
+.cart-item, .wishlist-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item img, .wishlist-item img {
+  border-radius: 5px;
+}
+
+/* Checkout */
+.checkout-container {
+  padding: 20px;
+}
+
+.checkout-container input,
+.checkout-container textarea,
+.checkout-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.checkout-container button {
+  background: #e91e63;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-container button:hover {
+  background: #c2185b;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f8f8f8;
+  margin-top: 20px;
+}
+
+/* Cart Page */
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.cart-item img {
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.cart-item p {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.cart-item input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart-item button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-item button:hover {
+  background: #c2185b;
+}
+
+#cart-total {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+.cart-container a button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 20px;
+  background: #e91e63;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-container a button:hover {
+  background: #c2185b;
+}
+.wishlist-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.wishlist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.wishlist-item img {
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.wishlist-item p {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.wishlist-item button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wishlist-item button:hover {
+  background: #c2185b;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.filter-bar select, 
+.filter-bar button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-bar button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.filter-bar button:hover {
+  background: #c2185b;
+}
+
+.account-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.account-container h2 {
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+.account-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.account-container input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.account-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e91e63;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.account-container button:hover {
+  background: #c2185b;
+}
+
+
+
+

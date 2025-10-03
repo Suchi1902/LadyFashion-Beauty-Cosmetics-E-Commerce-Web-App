@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LadyFashion - Product</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">LadyFashion</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="product-detail">
+    <img id="product-img" src="" alt="Product Image">
+    <div>
+      <h2 id="product-name"></h2>
+      <p id="product-price"></p>
+      <button onclick="addToCartFromDetail()">Add to Cart</button>
+    </div>
+  </section>
+</body>
+</html>
